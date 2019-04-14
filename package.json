@@ -1,9 +1,9 @@
 {
-  "name": "vue-echarts",
+  "name": "vue-echarts-template",
   "version": "0.0.1",
   "description": "ECharts Template for Vue.js.",
-  "main": "dist/vue-echarts.js",
-  "module": "template/ECharts-tpl.vue",
+  "main": "dist/vue-echarts-template.js",
+  "module": "template/ECharts-template.vue",
   "scripts": {
     "start": "npm run dev-demo",
     "dev-demo": "cross-env PROJECT=demo webpack-dev-server --host 127.0.0.1 --inline --progress --config build/webpack.dev.conf.js",
