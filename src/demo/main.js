@@ -7,14 +7,15 @@ import axios from 'axios'
 import ElementUI from 'element-ui'
 import * as m from 'utils/main'
 import 'element-ui/lib/theme-chalk/index.css'
+import globalMixin from 'mixins/globalMixin'
 
 Vue.use(ElementUI)
 Vue.use(Vuex)
 Vue.use(Router)
+Vue.mixin(globalMixin)
 
 export const router = new Router({
   mode: 'hash',
-  // mode: 'history',
   linkActiveClass: 'is-active'
 })
 

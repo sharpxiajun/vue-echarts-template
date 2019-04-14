@@ -19,5 +19,9 @@ export default {
   [types.SET_ACTIVE_MENU](state, activeMenu) {
     state.activeMenu = activeMenu
     storage.set('activeMenu', activeMenu)
+  },
+  [types.SET_THEME](state, theme) {
+    state.theme = theme
+    storage.set('theme', theme)
   }
 }

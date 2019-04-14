@@ -11,4 +11,4 @@
     name: 'App'
   }
 </script>
-<!--<style src="assets/css/global.css"></style>-->
+<style lang="less" src="assets/less/skin.less"></style>

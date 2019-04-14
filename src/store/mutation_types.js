@@ -2,5 +2,6 @@ export default {
   SET_MENUS: 'SET_MENUS',
   SET_ORIGIN_MENUS: 'SET_ORIGIN_MENUS',
   SET_ACTIVE_MENU: 'SET_ACTIVE_MENU',
-  SET_TITLE: 'SET_TITLE'//设置系统名称
+  SET_THEME: 'SET_THEME', //设置主题
+  SET_TITLE: 'SET_TITLE' //设置系统名称
 }

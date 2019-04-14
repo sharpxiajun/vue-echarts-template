@@ -1,5 +1,6 @@
 <template>
-  <el-container direction="vertical">
+  <el-container direction="vertical" id="layout">
+    <Header ref="header" />
     <div class="container" ref="mainContainer">
       <div class="main layout-wrapper">
         <transition name="el-zoom-in-center">
@@ -13,15 +14,34 @@
 </template>
 
 <script>
+  import Header from './header'
+  import { mapGetters } from 'vuex'
+
   export default {
     name: 'layout',
-    components: {},
+    components: { Header },
     data() {
-      return {}
+      return {
+      }
     },
-    created() {},
-    mounted() {},
-    methods: {}
+    created() {
+      console.log(this, this._theme)
+      this.setSkin(this._theme)
+    },
+    mounted() {
+    },
+    beforeDestroy() {
+    },
+    computed: {
+      ...mapGetters(['menus'])
+    },
+    watch: {
+    },
+    methods: {
+      setSkin(val) {
+        this.$root.$el.parentNode.className = val
+      }
+    }
   }
 </script>
 

@@ -1,0 +1,98 @@
+@import url('./global.less');
+@import url('./common.less');
+@import url('./public.less');
+@import url('./components/header.less');
+
+.white() {
+  @_minWidth: 1220px;
+  @_whiteColor: #fff;
+  /* 字体颜色 */
+  @_fontColor: #fff;
+  @_activeColor: #fff;
+  /* 浅色字体 */
+  @_shadowFontColor: #363a3f; // 灰色
+  @_grey1: #000;
+  @_grey2: #262626;
+  @_grey3: #595959;
+  @_grey4: #8c8c8c;
+  @_grey5: #bfbfbf;
+  @_grey6: #d9d9d9;
+  @_grey7: #e8e8e8;
+  @_grey8: #f5f5f5;
+  @_grey9: #fafafa;
+  /* 全局背景 */
+  @_globalBg: #eaeaeb;
+  @_primaryBtnBg: #0c101a;
+  @_boxShadowColor: rgba(0, 0, 0, 0.1);
+  @_chartBorderColor: #0c101a;
+  @_menuFontColor: #fff;
+  /* 头部导航 */
+  @_headerBg: #4570c1;
+  @_headerBgActive: rgba(96, 128, 242, 0.85);
+  @_headerHeight: 50px;
+  @_brandColorBR: #3e4886;
+
+  /* 下拉框的背景 */
+  @_selectDropdownBg: #1e2636;
+  /* listBox的字体颜色*/
+  @_listBoxFontColor: #7f8ea3;
+  @_listBoxShadowFontColor: #475061;
+
+  @_activeItem: #702126;
+  /* 综合分析panel颜色 */
+  @_default: #7c92bf;
+  @_error: #dc4d43;
+  @_warning: #dc9d36;
+  @_primary: #4ca1e7;
+  /* div背景 */
+  @_boxBg: #fff;
+  @_boxBgActive: rgba(96, 128, 242, 0.85);
+  @_boxBorderBg: rgba(96, 128, 242, 0.85);
+  @_tableBoxBg: #2c3467;
+
+
+  /* input样式 */
+  @_inputBorder: #344b77;
+  @_default: rgba(41, 198, 241, 0.9);
+  @_primary: rgba(17, 212, 155, 0.9);
+  @_defaultHover: rgba(41, 198, 241, 1);
+  @_primaryHover: rgba(17, 212, 155, 1);
+
+  @_errorColor: #f56c6c;
+  @_green: #0d0;
+  @_blue: #2374f7;
+  @_red: red;
+  @_yellow: yellow;
+  @_shadowBlueColor: #00d2ff;
+
+  /* 滚动条样式 */
+  @_scrollbarThumbBg : #777777;
+  @_scrollbarThumbShadow : inset 0 0 8px rgba(0, 0, 0, 0.2);
+  @_scrollbarThumbBgImage : none;
+  @_scrollbarBg: transparent;
+  @_scrollbarTrackBg: transparent;
+  @_scrollbarTrackShadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+  @_scrollbarCornerBg: transparent;
+
+  @_blackBoxShadow: rgba(255, 255, 255, 0.1);
+}
+
+.style-mixins() {
+  .common();
+  .public();
+  .header();
+}
+
+.skin-white {
+  .white();
+  .style-mixins();
+}
+
+body, #app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

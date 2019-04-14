@@ -1,0 +1,47 @@
+.public(){
+  #layout {
+    background: @_globalBg;
+    &.lockingPage {
+      .el-header,
+      .el-footer {
+        display: none;
+      }
+      .container {
+        margin-top: 0px;
+        height: 100%;
+        .el-breadcrumb {
+          display: none;
+          margin: 0px;
+        }
+        .icon.icon-weizhi {
+          display: none;
+        }
+        .main {
+          margin-bottom: 0px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    height: 100%;
+    .container {
+      height: calc(~'100% - 50px'); // overflow-x: hidden;
+      overflow: auto;
+      margin-top: 50px; // background-color: @_globalBg;
+      .main {
+        position: relative;
+        padding: 0;
+        margin-bottom: 10px;
+        >div{
+          overflow-x: hidden;
+        }
+      }
+    }
+  }
+  .layout-wrapper {
+    width: 80%;
+    min-width: @_minWidth;
+    overflow: auto;
+    margin: 0 auto;
+  }
+}

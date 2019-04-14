@@ -13,6 +13,7 @@ function menus() { // eslint-disable-line
       'menuCode': 'home',
       'menuIcon': 'fa fa-edit',
       'menuName': '基础实例',
+      'isVisible': true,
       'menuPath': '/sample',
       'treeNodeType': 'Leaf'
     }, {
@@ -21,6 +22,7 @@ function menus() { // eslint-disable-line
       'menuCode': 'doc',
       'menuIcon': 'fa fa-edit',
       'menuName': '操作文档',
+      'isVisible': true,
       'menuPath': '/doc',
       'treeNodeType': 'Leaf'
     }, {
@@ -29,6 +31,7 @@ function menus() { // eslint-disable-line
       'menuCode': 'api',
       'menuIcon': 'fa fa-edit',
       'menuName': 'API说明',
+      'isVisible': true,
       'menuPath': '/api',
       'treeNodeType': 'Leaf'
     }]
