@@ -1,7 +1,7 @@
 {
   "name": "vue-echarts",
-  "version": "4.0.1",
-  "description": "ECharts component for Vue.js.",
+  "version": "0.0.1",
+  "description": "ECharts Template for Vue.js.",
   "main": "dist/vue-echarts.js",
   "module": "template/ECharts-tpl.vue",
   "scripts": {
@@ -25,13 +25,15 @@
     "fecha": "^2.3.2",
     "lodash": "^4.17.10",
     "mockjs": "^1.0.1-beta3",
+    "node-notifier": "^5.1.2",
+    "prettier": "^1.12.1",
     "qs": "^6.5.1",
+    "resize-detector": "^0.1.9",
     "vue": "^2.5.2",
     "vue-echarts": "^3.0.3",
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "resize-detector": "^0.1.9"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
