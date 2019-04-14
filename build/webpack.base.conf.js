@@ -4,8 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const webpack = require('webpack')
 const vueLoaderConfig = require('./vue-loader.conf')
-
-selfConf.genMockData()
+const project = process.env.PROJECT
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -45,7 +44,8 @@ module.exports = {
       'utils': path.resolve(__dirname, '../src/utils'),
       'store': path.resolve(__dirname, `../src/store`),
       'mixins': path.resolve(__dirname, `../src/mixins`),
-      'router': path.resolve(__dirname, `../src/router`),
+      'demo': path.resolve(__dirname, `../src/${project}`),
+      'views': path.resolve(__dirname, `../src/${project}/views`),
       'constants': path.resolve(__dirname, `../src/constants`),
       'static': path.resolve(__dirname, '../static'),
     }

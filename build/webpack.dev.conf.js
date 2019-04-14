@@ -14,6 +14,11 @@ const proxyTable = config.dev.proxyTable
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+if (config.env.GEN_ROUTER) {
+  const selfConf = require('./self.conf')
+  selfConf.genRouter()
+}
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -48,7 +53,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     publicPath: config.dev.assetsPublicPath,
     // proxy: endProxy,
     proxy: proxyTable,
-    quiet: true, // necessary for FriendlyErrorsPlugin
+    quiet: false, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll
     },
