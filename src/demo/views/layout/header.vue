@@ -2,7 +2,7 @@
   <el-header :height="height">
     <div class="brand left" ref="brandLeft">
       <a href="javascript:;">
-        <i class="icon iconfont iconanquan-"></i>
+        <i class="icon iconfont iconvuejs"></i>
         {{title}}
       </a>
     </div>

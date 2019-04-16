@@ -12,3 +12,4 @@
   }
 </script>
 <style lang="less" src="assets/less/skin.less"></style>
+<style src="assets/iconfont/iconfont.css"></style>

@@ -8,11 +8,14 @@ import ElementUI from 'element-ui'
 import * as m from 'utils/main'
 import 'element-ui/lib/theme-chalk/index.css'
 import globalMixin from 'mixins/globalMixin'
+import VueTouchRipple from 'vue-touch-ripple'
+import 'vue-touch-ripple/component.css'
 
 Vue.use(ElementUI)
 Vue.use(Vuex)
 Vue.use(Router)
 Vue.mixin(globalMixin)
+Vue.use(VueTouchRipple)
 
 export const router = new Router({
   mode: 'hash',
