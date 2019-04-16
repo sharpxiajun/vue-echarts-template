@@ -6,7 +6,7 @@
   "module": "template/ECharts-template.vue",
   "scripts": {
     "start": "npm run dev-demo",
-    "dev-demo": "cross-env PROJECT=demo webpack-dev-server --host 127.0.0.1 --inline --progress --config build/webpack.dev.conf.js",
+    "dev-demo": "cross-env PROJECT=demo webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
     "build-demo": "cross-env PROJECT=demo node build/build.js"
   },
   "keywords": [
@@ -30,7 +30,9 @@
     "qs": "^6.5.1",
     "resize-detector": "^0.1.9",
     "vue": "^2.5.2",
+    "vue-color": "^2.7.0",
     "vue-echarts": "^3.0.3",
+    "vue-json-editor": "^1.3.0",
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -48,6 +50,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
+    "vue-touch-ripple": "^2.4.0",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.2.0",
     "cross-spawn": "^5.0.1",
