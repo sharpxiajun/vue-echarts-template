@@ -55,11 +55,14 @@ exports.genRouter = _ => {
           return false
         }
         console.log(`路由文件删除成功！`)
+        console.log(`start generate src/${project}/router/${project}.js ...`)
+        fs.writeFileSync(routerFile, router)
+        console.log(`start generate src/${project}/router/${project}.js ...`)
       })
+    } else {
+      console.log(`start generate src/${project}/router/${project}.js ...`)
+      fs.writeFileSync(routerFile, router)
+      console.log(`start generate src/${project}/router/${project}.js ...`)
     }
-    console.log(`start generate src/${project}/router/${project}.js ...`)
-    fs.writeFileSync(routerFile, router)
-    console.log(`start generate src/${project}/router/${project}.js ...`)
-
   })
 }
