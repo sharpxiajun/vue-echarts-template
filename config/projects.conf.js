@@ -1,7 +1,7 @@
 module.exports = {
   demo: {
     html: {
-      title: 'VUE-Echarts-Template',
+      title: 'VUE ECHARTS TEMPLATE',
       favicon: './static/favicons/screen.ico'
     },
     env: {
