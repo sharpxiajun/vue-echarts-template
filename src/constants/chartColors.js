@@ -12,7 +12,6 @@ export default {
   pieGradualColor: [{color0: '#009ae7', color1: '#72ccdb'}, {color0: '#f06bad', color1: '#e288f5'}, {color0: '#f8bd0c', color1: '#d8db72'}, {color0: '#009ae7', color1: '#8ca7e7'}, {color0: '#8cc76b', color1: '#bcbe36'}, {color0: '#fe2c00', color1: '#fe8d01'}, {color0: '#72ccdb', color1: '#9af5d6'}, {color0: '#9a6af2', color1: '#e288f5'}, {color0: '#009ae7', color1: '#a2b5e1'}, {color0: '#006cfd', color1: '#02d0d0'}, {color0: '#fb7204', color1: '#fbb88d'}, {color0: '#fa8e3f', color1: '#f1ee08'}],
   legendLabelColor: '#000',
   whiteColorTransparent: 'rgba(255, 255, 255, 0)',
-  legendTextColor: '#000',
   shadowColor: 'rgba(0, 0, 0, 0.5)',
   axisLabel: '#000',
   axisLine: '#4d5897',

@@ -1,6 +1,7 @@
 // 获取实例页面的树数据
 import basicBarChart from 'views/charts/bars/basicBarChart'
 import basicLineChart from 'views/charts/lines/basicLineChart'
+import basicPieChart from 'views/charts/pies/basicPieChart'
 
 export const sampleTree = () => {
   return [{
@@ -33,7 +34,8 @@ export const sampleTree = () => {
     label: '饼状图',
     children: [{
       code: 'basicPie',
-      label: '标准饼状图'
+      label: '标准饼状图',
+      component: basicPieChart
     }, {
       code: 'gradualPie',
       label: '渐变色饼状图'
