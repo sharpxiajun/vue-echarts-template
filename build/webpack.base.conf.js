@@ -46,6 +46,7 @@ module.exports = {
       'mixins': path.resolve(__dirname, `../src/mixins`),
       'demo': path.resolve(__dirname, `../src/${project}`),
       'views': path.resolve(__dirname, `../src/${project}/views`),
+      'components': path.resolve(__dirname, `../src/${project}/views/components`),
       'constants': path.resolve(__dirname, `../src/constants`),
       'static': path.resolve(__dirname, '../static'),
     }
