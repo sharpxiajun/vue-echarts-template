@@ -78,7 +78,8 @@
     },
     data() {
       return {
-        chartName: '[折线图模板]'
+        chartName: '[折线图模板]',
+        currAreaColors: []
       }
     },
     watch: {
@@ -124,6 +125,35 @@
       }
     },
     methods: {
+      initAreaColors() {
+        console.log('areaColor start', this.colors.length, this.areaColors.length)
+        let [ cLen, aLen ] = [ this.colors.length, this.areaColors.length ]
+        if (cLen > aLen) {
+          for (let i = 0; i < (cLen - aLen); i++) {
+            this.areaColors.push(this.colors[aLen + i])
+          }
+        }
+        console.log('areaColor end', this.colors.length, this.areaColors.length)
+        this.colors.forEach((item, index) => {
+          this.currAreaColors.push({
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              {
+                offset: 0,
+                color: this.areaColors[index] // 0% 处的颜色
+              },
+              {
+                offset: 1,
+                color: chartColors.whiteColorTransparent // 100% 处的颜色
+              }
+            ]
+          })
+        })
+      },
       markLineAverageData(item, index) {
         // 判断是否绘制平均值标线
         let oMarkLineAverage = {}
@@ -178,8 +208,9 @@
               ...this.markLineAverageData(item, index)
             })
             if (this.showLineArea) {
+              this.initAreaColors()
               series[index].areaStyle = {
-                color: this.areaColors[index]
+                color: this.currAreaColors[index]
               }
             }
             maxValue = getMaxValue(seriesData[index], maxValue)

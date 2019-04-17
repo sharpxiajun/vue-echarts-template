@@ -14,7 +14,7 @@
         <span>基础折线图</span>
       </div>
       <div class="chartBox" ref="myChartDemo">
-        <LineChart :chartData="chartParams.chartData"></LineChart>
+        <LineChart :chartData="chartParams.chartData" :showLineArea="chartParams.showLineArea" :xAxisValue="chartParams.xAxisValue"></LineChart>
       </div>
     </el-card>
   </div>
@@ -31,12 +31,16 @@
       return {
         chartParams: {
           chartData: {
-            legendData: ['告警事件'],
+            legendData: ['告警事件', '其他事件', '很多事件'],
             seriesData: [
-              [1432, 1568, 1125, 1359, 1654, 1852, 1523, 1369, 1459, 1854, 1635, 1364]
+              [1432, 1568, 1125, 1359, 1654, 1852, 1523, 1369, 1459, 1854, 1635, 1364],
+              [432, 568, 125, 359, 654, 852, 523, 369, 459, 854, 635, 364],
+              [2432, 2568, 2125, 2359, 2654, 2852, 2523, 2369, 2459, 2854, 2635, 2364]
             ],
             categoryData: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-          }
+          },
+          showLineArea: true,
+          xAxisValue: true
         },
         currJsonEditData: {}
       }
