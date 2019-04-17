@@ -23,6 +23,7 @@
     "echarts": "^4.1.0",
     "element-ui": "^2.3.4",
     "fecha": "^2.3.2",
+    "jsoneditor": "^5.32.4",
     "lodash": "^4.17.10",
     "mockjs": "^1.0.1-beta3",
     "node-notifier": "^5.1.2",
