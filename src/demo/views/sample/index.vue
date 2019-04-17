@@ -1,7 +1,7 @@
 <template>
   <div class="sample">
     <el-row :gutter="15">
-      <el-col :span="6">
+      <el-col :span="4">
         <div class="leftNav mt-10">
           <el-tree
             :data="treeData"
@@ -11,7 +11,7 @@
           </el-tree>
         </div>
       </el-col>
-      <el-col :span="18">
+      <el-col :span="20">
         <div class="rightBox mt-10">
           <keep-alive>
             <component v-bind:is="currChart"></component>
@@ -24,7 +24,7 @@
 
 <script>
   import * as api from 'api/demo/sample'
-  import basicBarChart from 'views/charts/bars/basicBarChart'
+  import basicLineChart from 'views/charts/lines/basicLineChart'
 
   export default {
     name: 'sample',
@@ -37,7 +37,7 @@
     },
     created() {
       this.treeData = api.sampleTree()
-      this.currChart = basicBarChart
+      this.currChart = basicLineChart
     },
     mounted() {
     },
@@ -60,7 +60,7 @@
 <style scoped lang="less">
   .sample {
     .leftNav {
-      min-height: 700px;
+      height: 100%;
       overflow-y: auto;
       box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
       border: 1px solid #EBEEF5;
@@ -68,11 +68,7 @@
     }
     .rightBox {
       height: 100%;
-      box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
-      border: 1px solid #EBEEF5;
-      border-radius: 4px;
-      padding: 6px;
-      background-color: #fff;
+      background-color: transparent;
     }
   }
 </style>

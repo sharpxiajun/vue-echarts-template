@@ -3,6 +3,7 @@
 @import url('./public.less');
 @import url('./elementUI.less');
 @import url('./components/header.less');
+@import url('./page/chartDemo.less');
 
 .white() {
   @_minWidth: 1220px;
@@ -28,8 +29,8 @@
   @_chartBorderColor: #0c101a;
   @_menuFontColor: #fff;
   /* 头部导航 */
-  @_headerBg: #4570c1;
-  @_headerBgActive: rgba(96, 128, 242, 0.85);
+  @_headerBg: #09a2b0;
+  @_headerBgActive: rgba(9, 162, 176, 0.85);
   @_headerHeight: 50px;
   @_brandColorBR: #3e4886;
 
@@ -83,6 +84,7 @@
   .public();
   .elementUI();
   .header();
+  .chartDemo();
 }
 
 .skin-white {
@@ -97,4 +99,8 @@ body, #app {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+
+div.jsoneditor-menu a.jsoneditor-poweredBy {
+  visibility: hidden;
 }

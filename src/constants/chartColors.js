@@ -1,7 +1,8 @@
 export default {
   colors: ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
+  barColors: ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
   barLinearColors: ['#00fdc4', '#0083fe', '#f253ff', '#5286ff', '#41daf5', '#7f64ff'],
-  lineColors: ['rgba(86,196,249,1)', 'rgba(34,183,197,1)', 'rgba(213,82,84,1)', 'rgba(171,66,197,1)'],
+  lineColors: ['rgba(86,196,249,1)', 'rgba(34,45,143,1)', 'rgba(213,82,84,1)', 'rgba(171,66,197,1)'],
   lineAreaColors: ['rgba(86,196,249,.2)', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
   outsidePieColor: '#1B2E37',
   outsidePieShadowColor: '#40858F',
@@ -9,7 +10,7 @@ export default {
   pieColors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
   mapVisualColors: ['#3150e9', '#89adc5', '#9cbdff', '#fff'],
   pieGradualColor: [{color0: '#009ae7', color1: '#72ccdb'}, {color0: '#f06bad', color1: '#e288f5'}, {color0: '#f8bd0c', color1: '#d8db72'}, {color0: '#009ae7', color1: '#8ca7e7'}, {color0: '#8cc76b', color1: '#bcbe36'}, {color0: '#fe2c00', color1: '#fe8d01'}, {color0: '#72ccdb', color1: '#9af5d6'}, {color0: '#9a6af2', color1: '#e288f5'}, {color0: '#009ae7', color1: '#a2b5e1'}, {color0: '#006cfd', color1: '#02d0d0'}, {color0: '#fb7204', color1: '#fbb88d'}, {color0: '#fa8e3f', color1: '#f1ee08'}],
-  whiteColor: '#000',
+  legendLabelColor: '#000',
   whiteColorTransparent: 'rgba(255, 255, 255, 0)',
   legendTextColor: '#000',
   shadowColor: 'rgba(0, 0, 0, 0.5)',

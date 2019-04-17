@@ -19,20 +19,11 @@ function menus() { // eslint-disable-line
     }, {
       'fatherId': Math.floor(Math.random() * 10000 + Math.random() * 10),
       'id': Math.floor(Math.random() * 10000 + Math.random() * 10),
-      'menuCode': 'doc',
+      'menuCode': 'help',
       'menuIcon': 'iconbangzhushouce',
-      'menuName': '操作文档',
+      'menuName': '帮助说明',
       'isVisible': true,
-      'menuPath': '/doc',
-      'treeNodeType': 'Leaf'
-    }, {
-      'fatherId': Math.floor(Math.random() * 10000 + Math.random() * 10),
-      'id': Math.floor(Math.random() * 10000 + Math.random() * 10),
-      'menuCode': 'api',
-      'menuIcon': 'iconAPI',
-      'menuName': 'API说明',
-      'isVisible': true,
-      'menuPath': '/api',
+      'menuPath': '/help',
       'treeNodeType': 'Leaf'
     }]
   }]

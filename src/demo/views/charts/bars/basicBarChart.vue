@@ -119,7 +119,7 @@
         <span>基础柱状图</span>
       </div>
       <div class="chartBox" ref="myChartDemo">
-        <BarChart :colors="colors" :barStack="barStack" :barData="barData" :rotate="rotate" :xAxisValue="xAxisValue" :legendShow="legendShow" :legendOrient="legendOrient" :legendLeft="legendLeft"></BarChart>
+        <BarChart></BarChart>
       </div>
     </el-card>
     <el-card>
@@ -318,17 +318,4 @@
   }
 </script>
 
-<style scoped lang="less">
-  .chartBox {
-    width: 100%;
-    height: 30vh;
-  }
-  .paramBox {
-    width: 100%;
-    height: 100%;
-  }
-  .contentBox {
-    width: 100%;
-    height: 100%;
-  }
-</style>
+<style scoped lang="less"></style>
