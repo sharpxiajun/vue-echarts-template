@@ -18,7 +18,7 @@
     props: {
       chartData: {
         type: Object,
-        default: function() {
+        default: () => {
           return {
             legendData: ['IP'],
             seriesData: [[16672, 14345, 19876, 22098]],

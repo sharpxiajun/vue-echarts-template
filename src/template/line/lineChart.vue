@@ -25,7 +25,7 @@
     props: {
       chartData: {
         type: Object,
-        default: function () {
+        default: () => {
           return {
             legendData: ['告警事件'],
             seriesData: [
