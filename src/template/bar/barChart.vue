@@ -122,7 +122,7 @@
 
         let barOpt = this.returnAxisOptions(legendData, categoryData, series, maxValue, minValue)
 
-        console.log('barOpt', barOpt)
+        // console.log('barOpt', barOpt)
 
         return barOpt
       }
