@@ -98,9 +98,6 @@
       }
     },
     mounted() {
-      if (this.pieAutoPlay) {
-        this.startPieAutoPlay(this.chartData.seriesData)
-      }
     },
     watch: {
       chartData(newVal, oldVal) {
@@ -153,6 +150,12 @@
       }
     },
     methods: {
+      refreshCallback() {
+        console.log('====================222222')
+        if (this.pieAutoPlay) {
+          this.startPieAutoPlay(this.chartData.seriesData)
+        }
+      },
       startPieAutoPlay(data) {
         let pieIndex = 0
         let allNum = 0

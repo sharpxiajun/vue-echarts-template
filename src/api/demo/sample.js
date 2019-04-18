@@ -2,6 +2,7 @@
 import basicBarChart from 'views/charts/bars/basicBarChart'
 import basicLineChart from 'views/charts/lines/basicLineChart'
 import basicPieChart from 'views/charts/pies/basicPieChart'
+import basicMapChart from 'views/charts/maps/basicMapChart'
 
 export const sampleTree = () => {
   return [{
@@ -52,7 +53,8 @@ export const sampleTree = () => {
     label: '地图',
     children: [{
       code: 'basicMap',
-      label: '标准地图'
+      label: '标准地图',
+      component: basicMapChart
     }, {
       code: 'shadowMap',
       label: '阴影地图'

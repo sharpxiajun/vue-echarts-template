@@ -84,6 +84,9 @@ export default {
   methods: {
     refresh() {
       this.options = this.setOptions()
+      if (this.refreshCallback) {
+        this.refreshCallback()
+      }
     },
     legendOpt(opt) {
       let [ left, top, right, bottom, type, orient ] = [ this.legendLeft || 'auto', this.legendTop || 'auto', this.legendRight || 'auto', this.legendBottom || 'auto', this.legendType || 'plain', this.legendOrient || 'horizontal' ]
@@ -96,6 +99,10 @@ export default {
         bottom: bottom,
         ...opt
       }
+    },
+    createTplCode(zjNm, imNm) {
+      let propsKeys = Object.keys(this._props).map((_) => `:${_}="chartParams.${_}"`)
+      console.log(`<${zjNm}  ${propsKeys.join(' ')}></${zjNm}>`)
     }
   }
 }

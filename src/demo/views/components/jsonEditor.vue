@@ -53,10 +53,23 @@
           mode: this.defaultMode,
           modes: this.modes,
           onChange() {
-            let json = that.currJsonEditor.get()
-            that.jsonData = json
-            console.log(`当前json数据:`, json)
-            that.$emit('jsonChange', json)
+            console.log('jsonEditor', arguments, this)
+
+            let flag = true
+            try {
+              console.log('JsonEditor onChange事件 内容正在变化...')
+            } catch (err) {
+              flag = false
+              console.error('JsonEditor onChange事件 报错，报错信息：', err)
+            } finally {
+              if (flag) {
+                let json = that.currJsonEditor.get()
+                that.jsonData = json
+                console.log(`JsonEditor onChange事件 当前json数据:`, json)
+                that.$emit('jsonChange', json)
+              }
+              flag = true
+            }
           }
         }
         this.currJsonEditor = new JsonEditor(this.$refs.currJsonEditor, opts, this.json)
