@@ -100,7 +100,8 @@ export default {
         ...opt
       }
     },
-    createTplCode(zjNm, imNm) {
+    createTplCode(zjNm) {
+      console.log(JSON.stringify(this._props))
       let propsKeys = Object.keys(this._props).map((_) => `:${_}="chartParams.${_}"`)
       console.log(`<${zjNm}  ${propsKeys.join(' ')}></${zjNm}>`)
     }

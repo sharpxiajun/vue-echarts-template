@@ -155,3 +155,33 @@ export const defaultMap = () => {
     }
   }
 }
+
+export const defaultScatter = () => {
+  return {
+    chartParams: {
+      'legendShow': true,
+      'legendOrient': 'horizontal',
+      'legendType': 'plain',
+      'legendLeft': '',
+      'legendTop': '',
+      'legendRight': '',
+      'legendBottom': '',
+      'legendTextColor': '#000',
+      'rotate': 0,
+      'xAxisValue': false,
+      'axisType': 'value',
+      'axisSplitLineColor': '#31396c',
+      'axisLineColor': '#4d5897',
+      'labelLimit': false,
+      'labelLimitWidth': 100,
+      'axisLabelColor': '#000',
+      'xSplitLineShow': false,
+      'ySplitLineShow': false,
+      'chartData': {
+        'legendData': ['传播数量统计'],
+        'seriesData': [[[133119620, 31, 'www.58wg.co/'], [69355780, 25, 'm.yiqixiegushi.com/'], [54617180, 29, 'api-laxin.1sapp.com/'], [51598260, 32, '7xiav1.com2.z0.glb.qiniucdn.com/'], [43583280, 22, 'an.res.taozuiredian.com/'], [40691743, 12, 'yd8.jianzhousc.com/'], [40186091, 22, 'cdn.voole.com:3580/mp4'], [33400235, 15, '527575.com/kj.html'], [4386543, 21, 'css.c7k7.com/'], [4384227, 30, 'www.244500.com/'], [4377613, 26, 'www.bturl.cc/'], [4362099, 24, 'baicizhan.qiniucdn.com/'], [4337705, 18, 'img.sique.com/']]]
+      },
+      'colors': ['#3CC7FF', '#ff6600', '#ff0000', '#ffe400', '#ff6600']
+    }
+  }
+}

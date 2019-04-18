@@ -3,6 +3,7 @@ import basicBarChart from 'views/charts/bars/basicBarChart'
 import basicLineChart from 'views/charts/lines/basicLineChart'
 import basicPieChart from 'views/charts/pies/basicPieChart'
 import basicMapChart from 'views/charts/maps/basicMapChart'
+import basicScatterChart from 'views/charts/scatters/basicScatterChart'
 
 export const sampleTree = () => {
   return [{
@@ -78,7 +79,8 @@ export const sampleTree = () => {
     label: '散点图',
     children: [{
       code: 'basicScatter',
-      label: '标准散点图'
+      label: '标准散点图',
+      component: basicScatterChart
     }]
   }, {
     code: 'earth',
