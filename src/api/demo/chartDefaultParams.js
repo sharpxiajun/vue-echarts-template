@@ -200,3 +200,25 @@ export const defaultScatter = () => {
     }
   }
 }
+
+export const defaultGauge = () => {
+  return {
+    chartParams: {
+      'legendShow': true,
+      'legendOrient': 'horizontal',
+      'legendType': 'plain',
+      'legendLeft': '',
+      'legendTop': '',
+      'legendRight': '',
+      'legendBottom': '',
+      'legendTextColor': '#000',
+      'chartData': {'seriesData': [{'name': '覆盖率', 'value': 92}]},
+      'colors': ['rgba(46, 101, 149, 1)', 'rgba(46, 101, 149, 0.8)', 'rgba(46, 101, 149, 0.4)', '#fd666d', '#67e0e3', '#37a2da'],
+      'gaugeTitle': '仪表盘',
+      'gaugeTitleColor': '#000',
+      'detailTextShadowColor': '#000',
+      'shadowColor': '#000',
+      'detailColor': '#000'
+    }
+  }
+}

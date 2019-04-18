@@ -4,6 +4,7 @@ import basicLineChart from 'views/charts/lines/basicLineChart'
 import basicPieChart from 'views/charts/pies/basicPieChart'
 import basicMapChart from 'views/charts/maps/basicMapChart'
 import basicScatterChart from 'views/charts/scatters/basicScatterChart'
+import basicGaugeChart from 'views/charts/gauges/basicGaugeChart'
 
 export const sampleTree = () => {
   return [{
@@ -66,6 +67,14 @@ export const sampleTree = () => {
     children: [{
       code: 'basicSunburst',
       label: '标准旭日图'
+    }]
+  }, {
+    code: 'gauge',
+    label: '仪表盘',
+    children: [{
+      code: 'basicGauge',
+      label: '标准仪表盘',
+      component: basicGaugeChart
     }]
   }, {
     code: 'graph',
