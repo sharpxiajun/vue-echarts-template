@@ -100,6 +100,9 @@ export default {
         ...opt
       }
     },
+    chartClick(params) {
+      this.$emit('click', params)
+    },
     createTplCode(zjNm) {
       console.log(JSON.stringify(this._props))
       let propsKeys = Object.keys(this._props).map((_) => `:${_}="chartParams.${_}"`)

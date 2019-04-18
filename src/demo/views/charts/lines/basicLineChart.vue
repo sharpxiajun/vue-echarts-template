@@ -14,7 +14,7 @@
         <span>基础折线图</span>
       </div>
       <div class="chartBox" ref="myChartDemo">
-        <LineChart :chartData="chartParams.chartData" :showLineArea="chartParams.showLineArea" :xAxisValue="chartParams.xAxisValue"></LineChart>
+        <LineChart :chartData="chartParams.chartData" :showLineArea="chartParams.showLineArea" :xAxisValue="chartParams.xAxisValue" @click="onChartClick"></LineChart>
       </div>
     </el-card>
   </div>
@@ -52,6 +52,9 @@
       onJsonChange(json) {
         console.log('Mock Json', json)
         this.currJsonEditData = json
+      },
+      onChartClick(params) {
+        console.log('onChartClick', params)
       },
       onSaveMockData() {
         this.chartParams.chartData = this.currJsonEditData

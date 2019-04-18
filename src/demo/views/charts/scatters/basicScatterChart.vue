@@ -28,7 +28,7 @@
                       :labelLimit="chartParams.labelLimit" :labelLimitWidth="chartParams.labelLimitWidth"
                       :axisLabelColor="chartParams.axisLabelColor" :xSplitLineShow="chartParams.xSplitLineShow"
                       :ySplitLineShow="chartParams.ySplitLineShow" :chartData="chartParams.chartData"
-                      :colors="chartParams.colors"></ScatterChart>
+                      :colors="chartParams.colors" @click="onChartClick"></ScatterChart>
       </div>
     </el-card>
   </div>
@@ -62,6 +62,9 @@
       onJsonChange(json) {
         console.log('Mock Json', json)
         this.chartParams = json.chartParams
+      },
+      onChartClick(params) {
+        console.log('onChartClick', params)
       },
       codeWatchTpl() {
         let propsKeys = Object.keys(this.chartParams)

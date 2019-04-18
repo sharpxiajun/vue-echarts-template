@@ -1,6 +1,6 @@
 <template>
   <div class="full-block">
-    <ECharts :options="options" auto-resize></ECharts>
+    <ECharts :options="options" auto-resize @click="chartClick"></ECharts>
   </div>
 </template>
 
