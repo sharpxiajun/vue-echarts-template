@@ -44,6 +44,7 @@ export default {
   polarShadowColor: 'rgba(29,170,206,0.4)',
   polarAxisSplitLine: '#97c6ff',
   graphColors: ['#C23531', '#4f52dc', '#C78620', '#5a99eb', '#37a2da', '#6348d0'],
+  graphTextColor: '#fff',
   pieBgColor: '#2a82be',
   pieShadowColor: 'rgba(40, 40, 40, 0.5)',
   barLinearColor: ['#fde177', '#fdac62', '#71eee7', '#44dcd9', '#82f885', '#11c1c6'],
