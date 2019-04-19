@@ -235,4 +235,42 @@
     text-align: center;
     padding: 5px 0;
   }
+
+  // 选择颜色的输入框
+  .input-color {
+    width: calc(~'100% - 155px');
+    display: inline-block;
+    .el-input-group__append,
+    .el-input-group__prepend{
+      padding: 0px 10px;
+    }
+  }
+  // input可以是数字和字符串
+  .num-str{
+    .input-box,
+    .radio-box {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .input-box {
+      width: 100px;
+      margin-right: 15px;
+      &.input-box2{
+        width: 300px;
+      }
+    }
+
+    .radio-box {
+      width: 400px;
+      margin-right: 15px;
+      &.radio-box2{
+        width: 160px;
+      }
+    }
+  }
+  // chart和编辑框的高度
+  .chart-editor {
+    height: 400px;
+  }
 }
