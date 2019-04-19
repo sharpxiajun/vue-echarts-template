@@ -16,37 +16,37 @@
     </el-card>
     <el-card class="mb-10">
       <div slot="header" class="clearfix">
-        <span>标准饼状图</span>
+        <span>标准散点图</span>
       </div>
       <div class="chartBox" ref="myChartDemo">
-        <PieChart :legendShow="chartParams.legendShow" :legendOrient="chartParams.legendOrient"
-                  :legendType="chartParams.legendType" :legendLeft="chartParams.legendLeft"
-                  :legendTop="chartParams.legendTop" :legendRight="chartParams.legendRight"
-                  :legendBottom="chartParams.legendBottom" :legendTextColor="chartParams.legendTextColor"
-                  :chartData="chartParams.chartData" :colors="chartParams.colors" :pieName="chartParams.pieName"
-                  :seriesLabelShow="chartParams.seriesLabelShow" :pieAutoPlay="chartParams.pieAutoPlay"
-                  :center="chartParams.center" :radius="chartParams.radius" :showPercent="chartParams.showPercent"
-                  :pieAutoPlayNumStyle="chartParams.pieAutoPlayNumStyle"
-                  :pieAutoPlayTextStyle="chartParams.pieAutoPlayTextStyle" :showRatio="chartParams.showRatio"
-                  :seriesLabelEmphasisShow="chartParams.seriesLabelEmphasisShow"></PieChart>
+        <ScatterChart :legendShow="chartParams.legendShow" :legendOrient="chartParams.legendOrient"
+                      :legendType="chartParams.legendType" :legendLeft="chartParams.legendLeft"
+                      :legendTop="chartParams.legendTop" :legendRight="chartParams.legendRight"
+                      :legendBottom="chartParams.legendBottom" :legendTextColor="chartParams.legendTextColor"
+                      :rotate="chartParams.rotate" :xAxisValue="chartParams.xAxisValue" :axisType="chartParams.axisType"
+                      :axisSplitLineColor="chartParams.axisSplitLineColor" :axisLineColor="chartParams.axisLineColor"
+                      :labelLimit="chartParams.labelLimit" :labelLimitWidth="chartParams.labelLimitWidth"
+                      :axisLabelColor="chartParams.axisLabelColor" :xSplitLineShow="chartParams.xSplitLineShow"
+                      :ySplitLineShow="chartParams.ySplitLineShow" :chartData="chartParams.chartData"
+                      :colors="chartParams.colors" @click="onChartClick"></ScatterChart>
       </div>
     </el-card>
   </div>
 </template>
 
 <script>
-  import PieChart from '@/pie/pieChart'
+  import ScatterChart from '@/scatter/scatterChart'
   import JsonEditor from 'components/jsonEditor'
-  import {defaultPie} from 'api/demo/chartDefaultParams'
+  import {defaultScatter} from 'api/demo/chartDefaultParams'
 
   export default {
-    name: 'basicPieChart',
-    components: {PieChart, JsonEditor},
+    name: 'basicScatterChart',
+    components: {ScatterChart, JsonEditor},
     data() {
       return {
-        ...defaultPie(),
+        ...defaultScatter(),
         usedChartParams: {},
-        importCodeTpl: `import PieChart from 'vue-echarts-template/pie/pieChart' `
+        importCodeTpl: `import ScatterChart from 'vue-echarts-template/scatter/scatterChart' `
       }
     },
     computed: {
@@ -55,16 +55,16 @@
       },
       codeTpl() {
         let propsKeys = Object.keys(this.chartParams).map((_) => `:${_}="chartParams.${_}"`)
-        return propsKeys.length === 0 ? `<PieChart${propsKeys.join(' ')}></PieChart>` : `<PieChart  ${propsKeys.join(' ')}></PieChart>`
+        return propsKeys.length === 0 ? `<ScatterChart${propsKeys.join(' ')}></ScatterChart>` : `<ScatterChart  ${propsKeys.join(' ')}></ScatterChart>`
       }
-    },
-    created() {
-      console.log('打印data', this)
     },
     methods: {
       onJsonChange(json) {
         console.log('Mock Json', json)
         this.chartParams = json.chartParams
+      },
+      onChartClick(params) {
+        console.log('onChartClick', params)
       },
       codeWatchTpl() {
         let propsKeys = Object.keys(this.chartParams)
@@ -82,4 +82,4 @@
   }
 </script>
 
-<style scoped></style>
+<style scoped lang='less'></style>

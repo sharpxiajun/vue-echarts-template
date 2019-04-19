@@ -16,37 +16,35 @@
     </el-card>
     <el-card class="mb-10">
       <div slot="header" class="clearfix">
-        <span>标准饼状图</span>
+        <span>标准仪表盘</span>
       </div>
       <div class="chartBox" ref="myChartDemo">
-        <PieChart :legendShow="chartParams.legendShow" :legendOrient="chartParams.legendOrient"
-                  :legendType="chartParams.legendType" :legendLeft="chartParams.legendLeft"
-                  :legendTop="chartParams.legendTop" :legendRight="chartParams.legendRight"
-                  :legendBottom="chartParams.legendBottom" :legendTextColor="chartParams.legendTextColor"
-                  :chartData="chartParams.chartData" :colors="chartParams.colors" :pieName="chartParams.pieName"
-                  :seriesLabelShow="chartParams.seriesLabelShow" :pieAutoPlay="chartParams.pieAutoPlay"
-                  :center="chartParams.center" :radius="chartParams.radius" :showPercent="chartParams.showPercent"
-                  :pieAutoPlayNumStyle="chartParams.pieAutoPlayNumStyle"
-                  :pieAutoPlayTextStyle="chartParams.pieAutoPlayTextStyle" :showRatio="chartParams.showRatio"
-                  :seriesLabelEmphasisShow="chartParams.seriesLabelEmphasisShow"></PieChart>
+        <GaugeChart :legendShow="chartParams.legendShow" :legendOrient="chartParams.legendOrient"
+                    :legendType="chartParams.legendType" :legendLeft="chartParams.legendLeft"
+                    :legendTop="chartParams.legendTop" :legendRight="chartParams.legendRight"
+                    :legendBottom="chartParams.legendBottom" :legendTextColor="chartParams.legendTextColor"
+                    :chartData="chartParams.chartData" :colors="chartParams.colors" :gaugeTitle="chartParams.gaugeTitle"
+                    :gaugeTitleColor="chartParams.gaugeTitleColor"
+                    :detailTextShadowColor="chartParams.detailTextShadowColor" :shadowColor="chartParams.shadowColor"
+                    :detailColor="chartParams.detailColor"></GaugeChart>
       </div>
     </el-card>
   </div>
 </template>
 
 <script>
-  import PieChart from '@/pie/pieChart'
+  import GaugeChart from '@/gauge/gaugeChart'
   import JsonEditor from 'components/jsonEditor'
-  import {defaultPie} from 'api/demo/chartDefaultParams'
+  import {defaultGauge} from 'api/demo/chartDefaultParams'
 
   export default {
-    name: 'basicPieChart',
-    components: {PieChart, JsonEditor},
+    name: 'basicGaugeChart',
+    components: {GaugeChart, JsonEditor},
     data() {
       return {
-        ...defaultPie(),
+        ...defaultGauge(),
         usedChartParams: {},
-        importCodeTpl: `import PieChart from 'vue-echarts-template/pie/pieChart' `
+        importCodeTpl: `import GaugeChart from 'vue-echarts-template/gauge/gaugeChart' `
       }
     },
     computed: {
@@ -55,16 +53,16 @@
       },
       codeTpl() {
         let propsKeys = Object.keys(this.chartParams).map((_) => `:${_}="chartParams.${_}"`)
-        return propsKeys.length === 0 ? `<PieChart${propsKeys.join(' ')}></PieChart>` : `<PieChart  ${propsKeys.join(' ')}></PieChart>`
+        return propsKeys.length === 0 ? `<GaugeChart${propsKeys.join(' ')}></GaugeChart>` : `<GaugeChart  ${propsKeys.join(' ')}></GaugeChart>`
       }
-    },
-    created() {
-      console.log('打印data', this)
     },
     methods: {
       onJsonChange(json) {
         console.log('Mock Json', json)
         this.chartParams = json.chartParams
+      },
+      onChartClick(params) {
+        console.log('onChartClick', params)
       },
       codeWatchTpl() {
         let propsKeys = Object.keys(this.chartParams)
@@ -82,4 +80,4 @@
   }
 </script>
 
-<style scoped></style>
+<style scoped lang='less'></style>

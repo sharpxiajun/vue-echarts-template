@@ -3,6 +3,9 @@ import basicBarChart from 'views/charts/bars/basicBarChart'
 import basicLineChart from 'views/charts/lines/basicLineChart'
 import basicPieChart from 'views/charts/pies/basicPieChart'
 import basicMapChart from 'views/charts/maps/basicMapChart'
+import basicScatterChart from 'views/charts/scatters/basicScatterChart'
+import basicGaugeChart from 'views/charts/gauges/basicGaugeChart'
+import basicGraphChart from 'views/charts/graphs/basicGraphChart'
 
 export const sampleTree = () => {
   return [{
@@ -67,18 +70,28 @@ export const sampleTree = () => {
       label: '标准旭日图'
     }]
   }, {
+    code: 'gauge',
+    label: '仪表盘',
+    children: [{
+      code: 'basicGauge',
+      label: '标准仪表盘',
+      component: basicGaugeChart
+    }]
+  }, {
     code: 'graph',
     label: '关系图',
     children: [{
       code: 'basicGraph',
-      label: '标准关系图'
+      label: '标准关系图',
+      component: basicGraphChart
     }]
   }, {
     code: 'scatter',
     label: '散点图',
     children: [{
       code: 'basicScatter',
-      label: '标准散点图'
+      label: '标准散点图',
+      component: basicScatterChart
     }]
   }, {
     code: 'earth',

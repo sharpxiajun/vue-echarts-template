@@ -53,6 +53,9 @@
         chartName: '[柱状图模板]'
       }
     },
+    mounted() {
+      this.createTplCode('BarChart')
+    },
     watch: {
       chartData(newVal, oldVal) {
         console.log(`${this.chartName}chartData[新值:${this.newVal};旧值:${this.oldVal}]`)
