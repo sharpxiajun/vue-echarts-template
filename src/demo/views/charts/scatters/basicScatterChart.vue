@@ -10,7 +10,7 @@
       <div class="mb-10" style="height: 160px;">
         <el-input type="textarea" :rows="6" placeholder="请输入内容" v-model="codeTpl"></el-input>
       </div>
-      <div class="paramBox" style="height: 1200px">
+      <div class="paramBox" style="height: 500px">
         <JsonEditor :json="jsonData" @jsonChange="onJsonChange"></JsonEditor>
       </div>
     </el-card>
