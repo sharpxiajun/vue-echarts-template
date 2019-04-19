@@ -5,6 +5,7 @@ import basicPieChart from 'views/charts/pies/basicPieChart'
 import basicMapChart from 'views/charts/maps/basicMapChart'
 import basicScatterChart from 'views/charts/scatters/basicScatterChart'
 import basicGaugeChart from 'views/charts/gauges/basicGaugeChart'
+import basicGraphChart from 'views/charts/graphs/basicGraphChart'
 
 export const sampleTree = () => {
   return [{
@@ -81,7 +82,8 @@ export const sampleTree = () => {
     label: '关系图',
     children: [{
       code: 'basicGraph',
-      label: '标准关系图'
+      label: '标准关系图',
+      component: basicGraphChart
     }]
   }, {
     code: 'scatter',

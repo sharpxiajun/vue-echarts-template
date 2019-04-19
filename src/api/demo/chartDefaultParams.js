@@ -222,3 +222,76 @@ export const defaultGauge = () => {
     }
   }
 }
+
+export const defaultGraph = () => {
+  return {
+    chartParams: {
+      'legendShow': true,
+      'legendOrient': 'horizontal',
+      'legendType': 'plain',
+      'legendLeft': '',
+      'legendTop': '',
+      'legendRight': '',
+      'legendBottom': '',
+      'legendTextColor': '#000',
+      'chartData': {
+        'legendData': ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
+        'seriesData': [{'id': '1', 'name': '直接访问1', 'value': 10, 'node': 0}, {
+          'id': '2',
+          'name': '邮件营销1',
+          'value': 10,
+          'node': 1
+        }, {'id': '3', 'name': '联盟广告1', 'value': 10, 'node': 1}, {
+          'id': '4',
+          'name': '视频广告1',
+          'value': 10,
+          'node': 1
+        }, {'id': '5', 'name': '搜索引擎1', 'value': 10, 'node': 1}, {
+          'id': '6',
+          'name': '直接访问2',
+          'value': 10,
+          'node': 2
+        }, {'id': '7', 'name': '邮件营销2', 'value': 10, 'node': 2}, {
+          'id': '8',
+          'name': '联盟广告2',
+          'value': 10,
+          'node': 2
+        }, {'id': '9', 'name': '视频广告2', 'value': 10, 'node': 2}, {
+          'id': '10',
+          'name': '搜索引擎2',
+          'value': 10,
+          'node': 3
+        }, {'id': '11', 'name': '直接访问3', 'value': 10, 'node': 3}, {
+          'id': '12',
+          'name': '邮件营销3',
+          'value': 10,
+          'node': 4
+        }, {'id': '13', 'name': '联盟广告3', 'value': 10, 'node': 4}, {
+          'id': '14',
+          'name': '视频广告3',
+          'value': 10,
+          'node': 5
+        }, {'id': '15', 'name': '搜索引擎3', 'value': 10, 'node': 5}],
+        'seriesLinkData': [{'target': '2', 'source': '1'}, {'target': '3', 'source': '1'}, {
+          'target': '4',
+          'source': '1'
+        }, {'target': '5', 'source': '1'}, {'target': '6', 'source': '5'}, {
+          'target': '10',
+          'source': '5'
+        }, {'target': '12', 'source': '5'}, {'target': '14', 'source': '5'}, {
+          'target': '13',
+          'source': '4'
+        }, {'target': '15', 'source': '4'}, {'target': '9', 'source': '3'}, {
+          'target': '11',
+          'source': '3'
+        }, {'target': '7', 'source': '2'}, {'target': '8', 'source': '2'}]
+      },
+      'colors': ['#C23531', '#4f52dc', '#C78620', '#5a99eb', '#37a2da', '#6348d0'],
+      'centerPoint': '邮件营销1',
+      'symbolType': 'circle',
+      'graphLineColor': '#4d5897',
+      'graphTextColor': '#fff',
+      'setItemColor': true
+    }
+  }
+}
