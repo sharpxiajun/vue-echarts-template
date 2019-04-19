@@ -94,11 +94,11 @@ export default {
     axisOpt() {
       let [ xAxisType, yAxisType, gridTop, gridBottom ] = [ '', '', '', 5 ]
       if (this.xAxisValue) {
-        xAxisType = 'value'
+        xAxisType = this.axisType
         yAxisType = 'category'
       } else {
         xAxisType = 'category'
-        yAxisType = 'value'
+        yAxisType = this.axisType
       }
       this.legendShow ? gridTop = 30 : gridTop = 10
       return {
