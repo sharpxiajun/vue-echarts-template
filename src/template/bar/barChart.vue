@@ -6,6 +6,7 @@
 
 <script>
   import globalChartMixin from 'mixins/globalChartMixin'
+  import gridChartMixin from 'mixins/gridChartMixin'
   import axisChartMixin from 'mixins/axisChartMixin'
   import ECharts from 'vue-echarts/components/ECharts'
   import chartColors from 'constants/chartColors'
@@ -14,7 +15,7 @@
   export default {
     name: 'barChart',
     components: { ECharts },
-    mixins: [ globalChartMixin, axisChartMixin ],
+    mixins: [ globalChartMixin, axisChartMixin, gridChartMixin ],
     props: {
       chartData: {
         type: Object,
@@ -39,8 +40,8 @@
         default: '40%'
       },
       barBorderRadius: {
-        type: Number,
-        default: 0
+        type: Array,
+        default: () => [0, 0, 0, 0]
       },
       labelShow: {
         type: Boolean,
@@ -121,9 +122,6 @@
         }
 
         let barOpt = this.returnAxisOptions(legendData, categoryData, series, maxValue, minValue)
-
-        // console.log('barOpt', barOpt)
-
         return barOpt
       }
     }
