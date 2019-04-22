@@ -45,8 +45,7 @@ export default {
     }
   },
   data() {
-    return {
-    }
+    return {}
   },
   watch: {
     rotate(newVal, oldVal) {
@@ -92,7 +91,7 @@ export default {
   },
   methods: {
     axisOpt() {
-      let [ xAxisType, yAxisType, gridTop, gridBottom ] = [ '', '', '', 5 ]
+      let [xAxisType, yAxisType] = ['', '']
       if (this.xAxisValue) {
         xAxisType = this.axisType
         yAxisType = 'category'
@@ -100,15 +99,7 @@ export default {
         xAxisType = 'category'
         yAxisType = this.axisType
       }
-      this.legendShow ? gridTop = 30 : gridTop = 10
       return {
-        grid: {
-          top: gridTop,
-          left: 10,
-          right: 20,
-          bottom: gridBottom,
-          containLabel: true
-        },
         xAxis: {
           type: xAxisType,
           splitLine: {
@@ -196,6 +187,10 @@ export default {
             color: this.legendTextColor
           }
         },
+        grid: {
+          ...this.gridOpt(),
+          containLabel: true
+        },
         ...this.axisOpt(),
         series: series
       }
@@ -219,9 +214,9 @@ export default {
       }
 
       if (this.axisType === 'log') {
-        this.xAxisValue
-          ? (chartOpts.yAxis.logBase = this.logBase)
-          : (chartOpts.xAxis.logBase = this.logBase)
+        this.xAxisValue ?
+          (chartOpts.yAxis.logBase = this.logBase) :
+          (chartOpts.xAxis.logBase = this.logBase)
       }
 
       // 数值过大，添加相应单位

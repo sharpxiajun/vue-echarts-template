@@ -48,6 +48,10 @@ export const defaultBar = () => {
       'legendRight': '',
       'legendBottom': '',
       'legendTextColor': '#000',
+      'gridLeft': '',
+      'gridTop': '',
+      'gridRight': '',
+      'gridBottom': '',
       'rotate': 0,
       'xAxisValue': false,
       'axisType': 'value',
@@ -66,7 +70,7 @@ export const defaultBar = () => {
       'colors': ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
       'barStack': false,
       'barCategoryGap': '40%',
-      'barBorderRadius': 0,
+      'barBorderRadius': [0, 0, 0, 0],
       'labelShow': false
     }
   }

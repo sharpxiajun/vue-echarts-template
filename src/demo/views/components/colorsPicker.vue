@@ -9,7 +9,7 @@
     <sketch-picker v-model="pickerColors"></sketch-picker>
     <div style="text-align: center; margin: 10px 0px 0px 0px">
       <el-button type="warning" size="mini" @click="colorCancel">取消</el-button>
-      <el-button type="success" size="mini" @click="colorNext">连续</el-button>
+      <el-button type="success" size="mini" v-if="isArray" @click="colorNext">连续</el-button>
       <el-button type="danger" size="mini" @click="colorOK">确定</el-button>
     </div>
   </div>
@@ -19,7 +19,12 @@
 import { Sketch } from 'vue-color'
 export default {
   name: 'colorsPicker',
-  props: {},
+  props: {
+    isArray: {
+      type: Boolean,
+      default: false
+    }
+  },
   components: { 'sketch-picker': Sketch },
   data() {
     return {
@@ -31,28 +36,41 @@ export default {
         rgba: { r: 25, g: 77, b: 51, a: 0.9 },
         a: 1
       },
+      colors: ''
     }
   },
   computed: {},
   mounted() {},
   methods: {
     colorCancel() {
-      this.colorsPickerShow = false
+      this.$emit('colorCancel', false)
     },
     colorNext() {
       if (this.colorModel === 'HEX') {
-        this.sColors ? this.sColors = `${this.sColors},${this.pickerColors.hex}` : this.sColors = `${this.pickerColors.hex}`
+        this.colors ? this.colors = `${this.colors},${this.pickerColors.hex}` : this.colors = `${this.pickerColors.hex}`
       } else if (this.colorModel === 'RGBA') {
-        this.sColors ? this.sColors = `${this.sColors},${this.pickerColors.hex}` : this.sColors = `${this.pickerColors.rgba}`
+        var colors = this.getColors(this.pickerColors.rgba)
+        this.isArray ? this.colors ? this.colors = `${this.colors},${colors}` : this.colors = `${colors}` : this.colors = `${colors}`
       }
+      this.$emit('colorNext', this.colors)
     },
     colorOK() {
       if (this.colorModel === 'HEX') {
-        this.sColors ? this.sColors = `${this.sColors},${this.pickerColors.hex}` : this.sColors = `${this.pickerColors.hex}`
+        this.colors ? this.colors = `${this.colors},${this.pickerColors.hex}` : this.colors = `${this.pickerColors.hex}`
       } else if (this.colorModel === 'RGBA') {
-        this.sColors ? this.sColors = `${this.sColors},${this.pickerColors.hex}` : this.sColors = `${this.pickerColors.rgba}`
+        var colors = this.getColors(this.pickerColors.rgba)
+        this.isArray ? this.colors ? this.colors = `${this.colors},${colors}` : this.colors = `${colors}` : this.colors = `${colors}`
       }
-      this.colorsPickerShow = false
+      this.$emit('colorOK', this.colors)
+    },
+    getColors(colors) {
+      var str = 'rgba('
+      for (var key in colors) {
+        str += colors[key] + ','
+      }
+      str = colors.substring(0, str.lastIndexOf(','))
+      str += ')'
+      return str
     }
   }
 }
